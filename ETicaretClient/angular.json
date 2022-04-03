@@ -36,7 +36,10 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/alertifyjs/build/css/alertify.min.css",
               "node_modules/alertifyjs/build/css/themes/semantic.min.css",
-              "node_modules/ngx-toastr/toastr.css"
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
+              "node_modules/ngx-spinner/animations/ball-atom.css",
+              "node_modules/ngx-spinner/animations/ball-spin-clockwise-fade-rotating.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js",

@@ -11,22 +11,7 @@ declare var $: any
 })
 export class AppComponent {
   title = 'ETicaretClient';
-  constructor(private toastrService: CustomToastrService) {
-    toastrService.message("Merhaba", "Gençay", {
-      messageType: ToastrMessageType.Info,
-      position: ToastrPosition.TopCenter
-    });
-    toastrService.message("Merhaba", "Gençay", {
-      messageType: ToastrMessageType.Success,
-      position: ToastrPosition.TopCenter
-    });
-    toastrService.message("Merhaba", "Gençay", {
-      messageType: ToastrMessageType.Error,
-      position: ToastrPosition.TopCenter
-    });
-    toastrService.message("Merhaba", "Gençay", {
-      messageType: ToastrMessageType.Warning,
-      position: ToastrPosition.TopCenter
-    });
+  constructor() {
+  
   }
 }
