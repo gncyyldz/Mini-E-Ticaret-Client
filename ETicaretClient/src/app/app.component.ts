@@ -3,7 +3,6 @@ import { ToastrService } from 'ngx-toastr';
 import { CustomToastrService, ToastrMessageType, ToastrPosition } from './services/ui/custom-toastr.service';
 declare var $: any
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,6 +11,6 @@ declare var $: any
 export class AppComponent {
   title = 'ETicaretClient';
   constructor() {
-  
+
   }
 }
