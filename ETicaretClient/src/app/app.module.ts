@@ -14,6 +14,7 @@ import { DeleteDirective } from './directives/admin/delete.directive';
 import { DeleteDialogComponent } from './dialogs/delete-dialog/delete-dialog.component';
 import { FileUploadComponent } from './services/common/file-upload/file-upload.component';
 import { FileUploadModule } from './services/common/file-upload/file-upload.module';
+import { FileUploadDialogComponent } from './dialogs/file-upload-dialog/file-upload-dialog.component';
 
 @NgModule({
   declarations: [
