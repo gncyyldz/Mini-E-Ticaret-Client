@@ -16,10 +16,13 @@ import { FileUploadComponent } from './services/common/file-upload/file-upload.c
 import { FileUploadModule } from './services/common/file-upload/file-upload.module';
 import { FileUploadDialogComponent } from './dialogs/file-upload-dialog/file-upload-dialog.component';
 import { JwtModule } from '@auth0/angular-jwt'
+import { LoginComponent } from './ui/components/login/login.component';
+import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -34,10 +37,24 @@ import { JwtModule } from '@auth0/angular-jwt'
         tokenGetter: () => localStorage.getItem("accessToken"),
         allowedDomains: ["localhost:7131"]
       }
-    })
+    }),
+    SocialLoginModule
   ],
   providers: [
-    { provide: "baseUrl", useValue: "https://localhost:7131/api", multi: true }
+    { provide: "baseUrl", useValue: "https://localhost:7131/api", multi: true },
+    {
+      provide: "SocialAuthServiceConfig",
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider("957600947173-p70lrqqhr09h965tdg3590122k70q04c.apps.googleusercontent.com")
+          }
+        ],
+        onError: err => console.log(err)
+      } as SocialAuthServiceConfig
+    }
   ],
   bootstrap: [AppComponent],
   schemas: [

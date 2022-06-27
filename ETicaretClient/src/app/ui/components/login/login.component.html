@@ -12,6 +12,8 @@
       <input #txtPassword type="password" class="form-control" id="password" placeholder="Şifre">
     </div>
 
+    <asl-google-signin-button></asl-google-signin-button>
+
     <button style="margin-top:5px;" type="submit" class="btn btn-primary" (click)="login(txtUsernameOrEmail.value, txtPassword.value)">Giriş Yap</button>
 
   </div>
