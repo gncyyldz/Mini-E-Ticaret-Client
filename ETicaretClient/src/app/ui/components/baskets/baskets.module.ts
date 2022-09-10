@@ -14,6 +14,9 @@ import { RouterModule } from '@angular/router';
     RouterModule.forChild([
       { path: "", component: BasketsComponent }
     ])
+  ],
+  exports: [
+    BasketsComponent
   ]
 })
 export class BasketsModule { }
