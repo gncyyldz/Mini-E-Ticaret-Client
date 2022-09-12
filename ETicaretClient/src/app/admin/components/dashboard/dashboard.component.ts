@@ -16,7 +16,9 @@ export class DashboardComponent extends BaseComponent implements OnInit {
 
   constructor(private alertify: AlertifyService, spinner: NgxSpinnerService, private signalRService: SignalRService) {
     super(spinner)
+    signalRService.start(HubUrls.OrderHub)
     signalRService.start(HubUrls.ProductHub)
+
   }
 
   ngOnInit(): void {
@@ -24,6 +26,12 @@ export class DashboardComponent extends BaseComponent implements OnInit {
       this.alertify.message(message, {
         messageType: MessageType.Notify,
         position: Position.TopRight
+      })
+    });
+    this.signalRService.on(ReceiveFunctions.OrderAddedMessageReceiveFunction, message => {
+      this.alertify.message(message, {
+        messageType: MessageType.Notify,
+        position: Position.TopCenter
       })
     });
   }
