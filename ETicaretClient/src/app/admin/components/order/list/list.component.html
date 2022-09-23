@@ -21,6 +21,11 @@
       <td mat-cell *matCellDef="let element"> {{element.createdDate}} </td>
     </ng-container>
 
+    <ng-container matColumnDef="viewdetail">
+      <th mat-header-cell *matHeaderCellDef width="30">  </th>
+      <td mat-cell *matCellDef="let element"> <img (click)="showDetail(element.id)" style="cursor:pointer" src="../../../../../assets/detail.png" width="25" height="25" /> </td>
+    </ng-container>
+
     <ng-container matColumnDef="delete">
       <th mat-header-cell *matHeaderCellDef width="30">  </th>
       <td mat-cell *matCellDef="let element"
