@@ -6,6 +6,7 @@ import { CustomerModule } from './customer/customer.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { DeleteDirective } from '../../directives/admin/delete.directive';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AuthorizeMenuModule } from './authorize-menu/authorize-menu.module';
 
 
 
@@ -18,6 +19,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     OrderModule,
     CustomerModule,
     DashboardModule,
+    AuthorizeMenuModule
   ]
 })
 export class ComponentsModule { }
