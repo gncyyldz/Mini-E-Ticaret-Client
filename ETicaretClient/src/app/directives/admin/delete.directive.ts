@@ -55,7 +55,7 @@ export class DeleteDirective {
             height: "toogle"
           }, 700, () => {
             this.callback.emit();
-            this.alertifyService.message("Ürün başarıyla silinmiştir.", {
+            this.alertifyService.message(`${this.controller == 'roles' ? 'Rol' : 'Ürün'} başarıyla silinmiştir.`, {
               dismissOthers: true,
               messageType: MessageType.Success,
               position: Position.TopRight
