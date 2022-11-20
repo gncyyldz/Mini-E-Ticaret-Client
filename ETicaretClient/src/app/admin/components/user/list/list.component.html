@@ -1,0 +1,53 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="userName">
+      <th mat-header-cell *matHeaderCellDef> Username </th>
+      <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nameSurname">
+      <th mat-header-cell *matHeaderCellDef> Name Surname </th>
+      <td mat-cell *matCellDef="let element"> {{element.nameSurname}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="twoFactorEnabled">
+      <th mat-header-cell *matHeaderCellDef> Two Factor Enabled </th>
+      <td mat-cell *matCellDef="let element">
+        <img [src]="element.twoFactorEnabled ? '../../../../assets/active.png' : '../../../../assets/passive.png'" width="15" height="15" />
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="role">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button color="primary" (click)="assignRole(element.id)">Rol Ata</button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef width="30">  </th>
+      <td mat-cell *matCellDef="let element"
+          appDelete
+          [id]="element.id"
+          (callback)="getUsers()"
+          controller="users">
+        <!--<img src="../../../../../assets/delete.png" width="25" height="25" (click)="delete(element.id, $event)" />-->
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator (page)="pageChanged()"
+                 [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>

@@ -8,6 +8,7 @@ import { DeleteDirective } from '../../directives/admin/delete.directive';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AuthorizeMenuModule } from './authorize-menu/authorize-menu.module';
 import { RoleModule } from './role/role.module';
+import { UserModule } from './user/user.module';
 
 
 
@@ -21,7 +22,8 @@ import { RoleModule } from './role/role.module';
     CustomerModule,
     DashboardModule,
     AuthorizeMenuModule,
-    RoleModule
+    RoleModule,
+    UserModule
   ]
 })
 export class ComponentsModule { }
