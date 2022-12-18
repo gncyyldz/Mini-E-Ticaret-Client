@@ -31,6 +31,11 @@
       <td mat-cell *matCellDef="let element"> <img style="cursor:pointer" (click)="addProductImages(element.id)" src="../../../../../assets/photo.png" width="25" height="25" /> </td>
     </ng-container>
 
+    <ng-container matColumnDef="qrcode">
+      <th mat-header-cell *matHeaderCellDef width="30">  </th>
+      <td mat-cell *matCellDef="let element"> <img style="cursor:pointer" src="../../../../../assets/qrcode.png" width="25" height="25" (click)="showQRCode(element.id)" /> </td>
+    </ng-container>
+
     <ng-container matColumnDef="edit">
       <th mat-header-cell *matHeaderCellDef width="30">  </th>
       <td mat-cell *matCellDef="let element"> <img style="cursor:pointer" src="../../../../../assets/edit.png" width="25" height="25" /> </td>
