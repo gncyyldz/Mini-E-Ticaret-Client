@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "None",
+    "appService.deploySubpath": "ETicaretClient\\dist"
+}

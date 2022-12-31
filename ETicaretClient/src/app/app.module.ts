@@ -38,14 +38,14 @@ import { DynamicLoadComponentDirective } from './directives/common/dynamic-load-
     JwtModule.forRoot({
       config: {
         tokenGetter: () => localStorage.getItem("accessToken"),
-        allowedDomains: ["localhost:7131"]
+        allowedDomains: ["eticaretapiapi20221231102840.azurewebsites.net"]
       }
     }),
     SocialLoginModule
   ],
   providers: [
-    { provide: "baseUrl", useValue: "https://localhost:7131/api", multi: true },
-    { provide: "baseSignalRUrl", useValue: "https://localhost:7131/", multi: true },
+    { provide: "baseUrl", useValue: "https://eticaretapiapi20221231102840.azurewebsites.net/api", multi: true },
+    { provide: "baseSignalRUrl", useValue: "https://eticaretapiapi20221231102840.azurewebsites.net/", multi: true },
     {
       provide: "SocialAuthServiceConfig",
       useValue: {
