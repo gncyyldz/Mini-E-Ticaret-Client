@@ -14,8 +14,8 @@ import { ProductService } from '../../../../services/common/models/product.servi
 })
 export class CreateComponent extends BaseComponent implements OnInit {
 
-  constructor(spiner: NgxSpinnerService, private productService: ProductService, private alertify: AlertifyService) {
-    super(spiner)
+  constructor(private productService: ProductService, private alertify: AlertifyService) {
+    super()
   }
 
   ngOnInit(): void {

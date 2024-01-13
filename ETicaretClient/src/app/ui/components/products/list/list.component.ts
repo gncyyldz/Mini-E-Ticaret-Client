@@ -17,8 +17,8 @@ import { CustomToastrService, ToastrMessageType, ToastrPosition } from '../../..
 })
 export class ListComponent extends BaseComponent implements OnInit {
 
-  constructor(private productService: ProductService, private activatedRoute: ActivatedRoute, private fileService: FileService, private basketService: BasketService, spinner: NgxSpinnerService, private customToastrService: CustomToastrService) {
-    super(spinner)
+  constructor(private productService: ProductService, private activatedRoute: ActivatedRoute, private fileService: FileService, private basketService: BasketService, private customToastrService: CustomToastrService) {
+    super()
   }
 
   currentPageNo: number;

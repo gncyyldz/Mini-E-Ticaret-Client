@@ -21,11 +21,11 @@ declare var $: any;
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent extends BaseComponent implements OnInit {
-  constructor(spinner: NgxSpinnerService,
+  constructor(
     private productService: ProductService,
     private alertifyService: AlertifyService,
     private dialogService: DialogService) {
-    super(spinner)
+    super()
   }
 
 

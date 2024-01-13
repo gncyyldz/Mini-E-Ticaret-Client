@@ -9,8 +9,8 @@ import { BaseComponent, SpinnerType } from 'src/app/base/base.component';
 })
 export class HomeComponent extends BaseComponent implements OnInit {
 
-  constructor(spinner: NgxSpinnerService) {
-    super(spinner)
+  constructor() {
+    super()
   }
 
   ngOnInit(): void {

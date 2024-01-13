@@ -11,8 +11,8 @@ import { UserAuthService } from '../../../services/common/models/user-auth.servi
 })
 export class PasswordResetComponent extends BaseComponent {
 
-  constructor(spinner: NgxSpinnerService, private userAuthService: UserAuthService, private alertifyService: AlertifyService) {
-    super(spinner)
+  constructor(private userAuthService: UserAuthService, private alertifyService: AlertifyService) {
+    super()
   }
 
   passwordReset(email: string) {

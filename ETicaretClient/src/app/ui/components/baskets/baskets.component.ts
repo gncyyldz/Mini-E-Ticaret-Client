@@ -22,8 +22,8 @@ declare var $: any;
 })
 export class BasketsComponent extends BaseComponent implements OnInit {
 
-  constructor(spinner: NgxSpinnerService, private basketService: BasketService, private orderService: OrderService, private toastrService: CustomToastrService, private router: Router, private dialogService: DialogService) {
-    super(spinner)
+  constructor(private basketService: BasketService, private orderService: OrderService, private toastrService: CustomToastrService, private router: Router, private dialogService: DialogService) {
+    super()
   }
 
   basketItems: List_Basket_Item[];

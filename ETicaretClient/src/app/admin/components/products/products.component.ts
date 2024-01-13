@@ -15,8 +15,8 @@ import { ListComponent } from './list/list.component';
 })
 export class ProductsComponent extends BaseComponent implements OnInit {
 
-  constructor(spinner: NgxSpinnerService, private httpClientService: HttpClientService, private dialogService: DialogService) {
-    super(spinner)
+  constructor(private httpClientService: HttpClientService, private dialogService: DialogService) {
+    super()
   }
 
   ngOnInit(): void {

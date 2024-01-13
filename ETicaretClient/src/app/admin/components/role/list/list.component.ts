@@ -16,11 +16,11 @@ import { RoleService } from '../../../../services/common/models/role.service';
 })
 export class ListComponent extends BaseComponent implements OnInit {
 
-  constructor(spinner: NgxSpinnerService,
+  constructor(
     private roleService: RoleService,
     private alertifyService: AlertifyService,
     private dialogService: DialogService) {
-    super(spinner)
+    super()
   }
 
 

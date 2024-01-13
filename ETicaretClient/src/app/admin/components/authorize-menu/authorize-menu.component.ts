@@ -33,8 +33,8 @@ interface ExampleFlatNode {
 })
 export class AuthorizeMenuComponent extends BaseComponent implements OnInit {
 
-  constructor(spinner: NgxSpinnerService, private applicationService: ApplicationService, private dialogService: DialogService) {
-    super(spinner)
+  constructor(private applicationService: ApplicationService, private dialogService: DialogService) {
+    super()
   }
 
   async ngOnInit() {

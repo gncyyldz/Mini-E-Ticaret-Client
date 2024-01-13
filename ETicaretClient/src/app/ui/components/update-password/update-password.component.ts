@@ -15,8 +15,8 @@ import { UserService } from '../../../services/common/models/user.service';
 })
 export class UpdatePasswordComponent extends BaseComponent implements OnInit {
 
-  constructor(spinner: NgxSpinnerService, private userAuthService: UserAuthService, private activatedRoute: ActivatedRoute, private alertifyService: AlertifyService, private userService: UserService, private router: Router) {
-    super(spinner)
+  constructor(private userAuthService: UserAuthService, private activatedRoute: ActivatedRoute, private alertifyService: AlertifyService, private userService: UserService, private router: Router) {
+    super()
   }
 
   state: any;

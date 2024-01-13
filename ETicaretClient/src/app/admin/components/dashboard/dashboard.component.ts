@@ -14,8 +14,8 @@ import { SignalRService } from '../../../services/common/signalr.service';
 })
 export class DashboardComponent extends BaseComponent implements OnInit {
 
-  constructor(private alertify: AlertifyService, spinner: NgxSpinnerService, private signalRService: SignalRService) {
-    super(spinner)
+  constructor(private alertify: AlertifyService, private signalRService: SignalRService) {
+    super()
     //signalRService.start(HubUrls.OrderHub)
     //signalRService.start(HubUrls.ProductHub)
 

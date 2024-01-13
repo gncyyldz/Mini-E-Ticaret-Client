@@ -16,11 +16,11 @@ import { OrderService } from '../../../../services/common/models/order.service';
 })
 export class ListComponent extends BaseComponent implements OnInit {
 
-  constructor(spinner: NgxSpinnerService,
+  constructor(
     private orderService: OrderService,
     private alertifyService: AlertifyService,
     private dialogService: DialogService) {
-    super(spinner)
+    super()
   }
 
 

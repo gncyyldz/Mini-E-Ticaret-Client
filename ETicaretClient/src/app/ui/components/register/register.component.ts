@@ -14,8 +14,8 @@ import { CustomToastrService, ToastrMessageType, ToastrPosition } from '../../..
 })
 export class RegisterComponent extends BaseComponent implements OnInit {
 
-  constructor(private formBuilder: UntypedFormBuilder, private userService: UserService, private toastrService: CustomToastrService, spinner: NgxSpinnerService) {
-    super(spinner)
+  constructor(private formBuilder: UntypedFormBuilder, private userService: UserService, private toastrService: CustomToastrService) {
+    super()
   }
 
   frm: UntypedFormGroup;

@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 export class BaseComponent {
-  constructor(private spinner: NgxSpinnerService) { }
+  spinner :NgxSpinnerService= Inject(NgxSpinnerService);
 
   showSpinner(spinnerNameType: SpinnerType) {
     this.spinner.show(spinnerNameType);

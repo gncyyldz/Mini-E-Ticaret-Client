@@ -17,11 +17,11 @@ import { UserService } from '../../../../services/common/models/user.service';
 export class ListComponent extends BaseComponent implements OnInit {
 
 
-  constructor(spinner: NgxSpinnerService,
+  constructor(
     private userService: UserService,
     private alertifyService: AlertifyService,
     private dialogService: DialogService) {
-    super(spinner)
+    super()
   }
 
 
